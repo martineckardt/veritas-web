@@ -31,19 +31,19 @@ function LinkButton() {
   } else if (device && !connected && !registered) {
     return (
       <Button fullWidth disabled>
-        Mint Halo
+        Create Certificate for Product
       </Button>
     )
   } else if (device && keys && !registered) {
     return (
       <Button to={'/register'} fullWidth>
-        Mint Halo
+        Certificate for Product
       </Button>
     )
   } else {
     return (
       <Button fullWidth disabled>
-        Mint Halo
+        Certificate for Product
       </Button>
     )
   }
@@ -71,12 +71,12 @@ export default function Home() {
         {keys ? (
           <>
             <h1 className="text-3xl mt-6 font-expanded uppercase">
-              Halo
+              Product
               <br />
               Detected
             </h1>
             <p className="text-dark-gray text-sm mt-4 mb-4">
-              This chip hasn’t been registered. Tap link below to mint HaLo.
+              This Product hasn’t been registered. Tap link below to mint Certificate for Product.
             </p>
             <h3 className="font-normal mt-4 mb-1 text-light-gray text-xs">Device ID</h3>
             <p className="break-word font-bold text-smb">{keys?.primaryPublicKeyHash}</p>
@@ -84,12 +84,12 @@ export default function Home() {
         ) : (
           <>
             <h1 className="text-3xl mt-6 font-expanded uppercase">
-              No Halo
+              No Product
               <br />
               Detected
             </h1>
             <p className="text-dark-gray text-sm mt-4 mb-4">
-              Scan HaLo by tapping the button below and holding the chip to your smartphone NFT antenna.
+              Scan Product by tapping the button below and holding the chip to your smartphone NFT scanner.
             </p>
           </>
         )}
@@ -98,7 +98,7 @@ export default function Home() {
         <CardPadding>
           {LinkButton()}
           {!connected && !registered && (
-            <p className="text-center text-xs text-light-gray uppercase mt-4">Connect wallet to mint HaLo</p>
+            <p className="text-center text-xs text-light-gray uppercase mt-4">Connect wallet to mint Certificate for Product</p>
           )}
         </CardPadding>
       </CardFooter>

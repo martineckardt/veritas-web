@@ -25,7 +25,7 @@ export default function Register() {
   return (
     <Card loading={rs.loading}>
       <CardPadding>
-        <CardBack to="/">Register Halo</CardBack>
+        <CardBack to="/">Register Product</CardBack>
 
         <div className="relative mb-6">
           <GrayCenterBox>
@@ -41,7 +41,7 @@ export default function Register() {
                 name="image"
               />
               <label htmlFor="image" className="button small black">
-                Add Image
+                Add Product Image
               </label>
             </div>
           </GrayCenterBox>
@@ -55,11 +55,13 @@ export default function Register() {
           </div>
         </div>
 
+        {/* TODO: Add more fields (manufacturer, model, etc.)*/}
+        
         <Field
           onChange={rs.changeRegisterField}
           value={rs.registerForm.name}
           type="text"
-          placeholder="Enter name..."
+          placeholder="Enter Brand Name..."
           name="name"
         />
 
@@ -67,7 +69,7 @@ export default function Register() {
           onChange={rs.changeRegisterField}
           value={rs.registerForm.description}
           type="textarea"
-          placeholder="Enter description..."
+          placeholder="Enter Product Description..."
           name="description"
         />
       </CardPadding>
@@ -77,11 +79,11 @@ export default function Register() {
 
           {rs.registerForm.image ? (
             <Button fullWidth onClick={rs.scanHalo}>
-              Tap chip to mint HaLo
+              Tap chip to mint Product Certificate
             </Button>
           ) : (
             <Button fullWidth disabled>
-              Please add your image
+              Please add your product image
             </Button>
           )}
         </CardPadding>

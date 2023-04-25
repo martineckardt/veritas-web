@@ -30,6 +30,7 @@ type TRegisterStore = {
   signing: boolean
   message: string
   registerForm: {
+    // TODO: Add more fields (manufacturer, model, etc.)
     name: string
     description: string
     imageSrc: string
@@ -140,12 +141,14 @@ const registerStore = create<TRegisterStore>((set) => ({
     set({ sigSplit, sigMsg, block })
   },
 
+
   signHalo: async () => {
     console.log(`sign called`)
     const { keys } = deviceStore.getState()
     const { address, chainId } = walletStore.getState()
     const device_id = keys?.primaryPublicKeyHash.substring(2)
 
+    // TODO: Add more fields (manufacturer, model, etc.)
     const { name, description, image } = registerStore.getState().registerForm
     const device_token_metadata = { name, description }
     const { block, sigMsg, sigSplit, base64Image } = registerStore.getState()
@@ -165,6 +168,7 @@ const registerStore = create<TRegisterStore>((set) => ({
         { name: 'signatureS', type: 'string' },
         { name: 'digest', type: 'string' },
       ],
+      // TODO: Add more fields (manufacturer, model, etc.)
       Media: [
         { name: 'cid', type: 'string' },
         { name: 'name', type: 'string' },
@@ -268,6 +272,7 @@ const registerStore = create<TRegisterStore>((set) => ({
         { name: 'signatureS', type: 'string' },
         { name: 'digest', type: 'string' },
       ],
+      // TODO: Add more fields (manufacturer, model, etc.)
       Media: [
         { name: 'cid', type: 'string' },
         { name: 'name', type: 'string' },
