@@ -70,7 +70,7 @@ export default function Home() {
 
         {keys ? (
           <>
-            <h1 className="text-3xl mt-6 font-expanded uppercase">
+            <h1 className="text-3xl mt-6 uppercase">
               Product
               <br />
               Detected
@@ -83,7 +83,7 @@ export default function Home() {
           </>
         ) : (
           <>
-            <h1 className="text-3xl mt-6 font-expanded uppercase">
+            <h1 className="text-3xl mt-6 uppercase">
               No Product
               <br />
               Detected

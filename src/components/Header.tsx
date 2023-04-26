@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <header className="header">
       <Link to="/">
-        <img width="62" src="/assets/logo.png" />
+        <img width="150" src="/assets/logo.png" />
       </Link>
 
       {store.connected ? (
