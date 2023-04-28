@@ -16,8 +16,8 @@ function LinkButton() {
 
   if (!keys) {
     return (
-      <Button fullWidth onClick={linkHalo}>
-        Initiate Scan
+      <Button onClick={linkHalo}>
+        Scan Chip
       </Button>
     )
   } else if (device && registered) {
@@ -89,7 +89,7 @@ export default function Home() {
               Detected
             </h1>
             <p className="text-dark-gray text-sm mt-4 mb-4">
-              Scan Product by tapping the button below and holding the chip to your smartphone NFT scanner.
+              Scan Product by tapping the button below and holding the chip to your smartphone's NFC scanner.
             </p>
           </>
         )}

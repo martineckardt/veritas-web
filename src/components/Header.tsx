@@ -33,7 +33,7 @@ export default function Header() {
       {store.connected ? (
         <WalletDropdown />
       ) : (
-        <Button size="small" color="pink-gradient" onClick={open}>
+        <Button color="pink-gradient" onClick={open}>
           Connect wallet
         </Button>
       )}

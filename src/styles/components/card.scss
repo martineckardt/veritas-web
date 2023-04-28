@@ -1,6 +1,6 @@
 .card {
   background: $white;
-  border-radius: 30px;
+  border-radius: 15px;
   position: relative;
   overflow: hidden;
 
@@ -23,11 +23,15 @@
 
 .card-padding {
   padding: 24px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .card-footer {
   background: $grayBg;
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 15px 15px;
   position: relative;
   z-index: 2;
 }
